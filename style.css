@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+}
+body{
+    background: #abc4e2;
+    background-image: url(img/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+.container{
+    width: 400px;
+    padding: 25px 35px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 20px;
+}
+.container p{
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+.container input{
+    width: 100%;
+    height: 50px;
+    border: 2px solid #141416;
+    outline: 0;
+    padding: 10px;
+    margin: 10px 0 20px;
+    border-radius: 10px;
+    font-size: large;
+}
+.container button{
+    width: 100%;
+    height: 50px;
+    background: #494eea;
+    color: #fff;
+    border: 0;
+    outline: 0;
+    border: 1px solid #141416;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    margin: 20px 0;
+    font-size: large;
+    font-weight: 500;
+}
+#imgBox{
+    width: 200px;
+    border-radius: 10px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s;
+}
+#imgBox img{
+    width: 100%;
+    padding: 10px;
+}
+#imgBox.show-img{
+    max-height: 300px;
+    margin: 10px auto;
+    border: 2px solid #0d0d0d;
+}
+.error{
+    animation: shake 0.1s linear 10;
+}
+/* animation shake */
+@keyframes shake{
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(-3px);
+    }
+    50%{
+        transform: translateX(0);
+    }
+    75%{
+        transform: translateX(3px);
+    }
+   100%{
+        transform: translateX(0);
+    }
+}
